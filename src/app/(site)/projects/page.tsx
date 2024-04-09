@@ -2,7 +2,7 @@ import React from 'react';
 import { getProjects } from '../../../../sanity/sanity-utils';
 import Link from 'next/link';
 
-export default async function projects() {
+export default async function Projects() {
     const projects = await getProjects();
 
 
@@ -17,7 +17,9 @@ export default async function projects() {
                     <p className="text-gray-700 text-base">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
                     </p>
-                    <Link href={project.slug}>See project</Link>
+                    <Link href={`/projects/${project.slug}`}>
+                      <a className="text-blue-500">Read more</a>
+                    </Link>
                   </div>
                 </div>
           ))}
