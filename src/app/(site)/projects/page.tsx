@@ -8,17 +8,17 @@ export default async function Projects() {
 
     return (
         <div>
-        <h1>Projects</h1>
+        <h1 className='text-4xl font-bold my-20'>Projects</h1>
         <div className="flex">
           {projects.map((project) => (
                   <div key={project._id} className="max-w-sm rounded overflow-hidden shadow-lg">
                   <div className="px-6 py-4">
                     <div key={project._id} className="font-bold text-xl mb-2">{project.title}</div>
-                    <p className="text-gray-700 text-base">
+                    <p className="mb-2 text-gray-700 text-base">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
                     </p>
-                    <Link href={`/projects/${project.slug}`}>
-                      <a className="text-blue-500">Read more</a>
+                    <Link href={`/projects/${project.slug.current}`}>
+                      Read more
                     </Link>
                   </div>
                 </div>

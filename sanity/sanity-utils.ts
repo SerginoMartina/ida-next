@@ -7,7 +7,8 @@ export async function getProjects(): Promise<Project[]> {
     groq`*[_type == "project"] {
     _id, 
     _createdAt, 
-    title
+    title,
+    slug
     }`
   );
 }
