@@ -14,7 +14,7 @@ export default async function Home() {
       </div>
 
 
-      <div className="flex">
+      <div className="flex space-x-4">
           {projects.map((project) => (
                   <div key={project._id} className="max-w-sm rounded overflow-hidden shadow-lg">
                   <div className="px-6 py-4">

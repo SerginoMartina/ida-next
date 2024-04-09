@@ -17,7 +17,7 @@ export default async function Projects() {
                     <p className="mb-2 text-gray-700 text-base">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
                     </p>
-                    <Link href={`/projects/${project.slug.current}`}>
+                    <Link href={`/projects/${project.slug}`}>
                       Read more
                     </Link>
                   </div>
