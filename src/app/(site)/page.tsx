@@ -5,6 +5,14 @@ import Link from 'next/link';
 export default async function Home() {
   const projects = await getProjects();
 
+  interface Project {
+    _id: string;
+    title: string;
+    slug: {
+      current: string;
+    };
+  }
+  
   return (
     <div>
       <div className='hero-section mt-20 h-60 text-center'>
@@ -13,9 +21,8 @@ export default async function Home() {
         <h2 className="hero-subtitle text-xl font-extrabold text-blue-600">DIGITAL MADE HUMAN</h2>
       </div>
 
-
       <div className="flex space-x-4">
-          {projects.map((project) => (
+          {projects.map((project: Project) => (
                   <div key={project._id} className="max-w-sm rounded overflow-hidden shadow-lg">
                   <div className="px-6 py-4">
                     <div className="font-bold text-xl mb-2">{project.title}</div>
