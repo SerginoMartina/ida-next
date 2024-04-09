@@ -6,9 +6,12 @@ export default async function Home() {
 
   return (
     <div>
-      <span className="hero-subtitle">WE ARE IDA</span>
-      <h1 className='hero-title'>Your Adobe partner in Benelux</h1>
-      <span className="hero-subtitle">DIGITAL MADE HUMAN</span>
+      <div className='hero-section mt-20 h-60 text-center'>
+        <h2 className="hero-subtitle mb-4 text-xl font-extrabold text-blue-600">WE ARE IDA</h2>
+        <h1 className='hero-title mb-4 text-4xl text-blue-600'>Your Adobe partner in Benelux</h1>
+        <h2 className="hero-subtitle text-xl font-extrabold text-blue-600">DIGITAL MADE HUMAN</h2>
+      </div>
+
 
       <div className="flex">
           {projects.map((project) => (
@@ -23,12 +26,12 @@ export default async function Home() {
           ))}
       </div>
 
-      <section className="cta">
+      <section className="cta mt-20">
         <h2>Ready to start your project?</h2>
         <button className="cta-button">Get in touch</button>
       </section>
 
-      <footer>
+      <footer className="mt-20">
         <p>© 2024 IDA. All rights reserved.</p>
       </footer>
     </div>
