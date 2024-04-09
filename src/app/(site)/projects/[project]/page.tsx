@@ -1,6 +1,10 @@
 import { getProject } from "../../../../../sanity/sanity-utils";
 
-export default async function Project({ params }: any) {
+type Props = {
+    params: { project: string };    
+}
+
+export default async function Project({ params }: Props) {
 
     const slug = params.project;
     const project = await getProject(slug);
